@@ -66,12 +66,15 @@ struct MotionAnimationView: View {
             }
         } //: ZSTACK
         .frame(width: 256, height: 256)
+        .mask(Circle())
+        .drawingGroup() //  Use for high performance rendering and use the apple metal framework
     }
 }
 
 #Preview {
-    ZStack {
-        Color.teal.ignoresSafeArea()
-        MotionAnimationView()
-    }
+    MotionAnimationView()
+        .background(
+            Circle()
+                .fill(.teal)
+        )
 }
