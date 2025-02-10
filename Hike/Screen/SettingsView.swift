@@ -80,26 +80,7 @@ struct SettingsView: View {
                 LabeledContent("Application", value: "Hike")
                 
                 // 2. Advanced Labeled Content
-                LabeledContent {
-                    // Content
-                    Text("Hike")
-                        .foregroundColor(.primary)
-                        .fontWeight(.heavy)
-                } label: {
-                    // Label
-                    HStack {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 8)
-                                .frame(width: 30, height: 30)
-                                .foregroundColor(.blue)
-                            Image(systemName: "apps.iphone")
-                                .foregroundColor(.white)
-                                .fontWeight(.semibold)
-                        }
-                        
-                        Text("Application")
-                    }
-                }
+                
                 
             } //: SECTION
 
