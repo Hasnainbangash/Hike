@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct CustomListRowView: View {
+    // MARK: - PROPERTIES
+    
+    @State var rowLabel: String
+    @State var rowIcon: String
+    @State var rowContent: String
+    @State var rowTintColor: Color
+    
     var body: some View {
         LabeledContent {
             // Content
@@ -33,5 +40,12 @@ struct CustomListRowView: View {
 }
 
 #Preview {
-    CustomListRowView()
+    List {
+        CustomListRowView(
+            rowLabel: "Designer",
+            rowIcon: "paintpalette",
+            rowContent: "John Doe",
+            rowTintColor: .pink
+        )
+    }
 }
