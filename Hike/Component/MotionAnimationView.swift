@@ -26,8 +26,15 @@ struct MotionAnimationView: View {
     
     var body: some View {
         ZStack {
-            Circle()
-                .foregroundColor(.white)
+            ForEach(0...randomCircle, id: \.self) { item in
+                Circle()
+                    .foregroundColor(.white)
+                    .opacity(0.25)
+                    .position(
+                        x: randomCoordinate(),
+                        y: randomCoordinate()
+                    )
+            }
         } //: ZSTACK
         .frame(width: 256, height: 256)
     }
