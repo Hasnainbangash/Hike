@@ -39,7 +39,7 @@ struct CardView: View {
                         } label: {
                             CustomButtonView()
                         }
-
+                        
                         
                     }
                     
@@ -74,7 +74,34 @@ struct CardView: View {
                 
                 // MARK: - FOOTER
                 
-                
+                Button {
+                    // ACTION: Generate a random number
+                    print("The button was pressed.")
+                } label: {
+                    Text("Explore More")
+                        .font(.title2)
+                        .fontWeight(.heavy)
+                        .foregroundStyle(
+                            LinearGradient(
+                                colors: [
+                                    .customGreenLight,
+                                    .customGreenMedium
+                                ],
+                                startPoint: .top,
+                                endPoint: .bottom
+                            )
+                        )
+                }
+                .background(
+                    LinearGradient(
+                        colors: [
+                            .customGrayLight,
+                            .customGrayMedium
+                        ],
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                )
                 
             } //: VSTACK
         } //: Card
