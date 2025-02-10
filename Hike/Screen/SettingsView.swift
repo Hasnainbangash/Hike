@@ -13,6 +13,8 @@ struct SettingsView: View {
             // MARK: - SECTION: HEADER
             
             HStack {
+                Spacer()
+                
                 Image(systemName: "laurel.leading")
                     .font(.system(size: 80, weight: .black))
                 
@@ -21,6 +23,8 @@ struct SettingsView: View {
                 
                 Image(systemName: "laurel.trailing")
                     .font(.system(size: 80, weight: .black))
+                
+                Spacer()
             }
             
             // MARK: - SECTION: ICONS
