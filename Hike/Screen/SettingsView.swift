@@ -77,16 +77,26 @@ struct SettingsView: View {
                     .padding(.vertical, 8)
             ) {
                 // 1. Basic Labeled Content
-                LabeledContent("Application", value: "Hike")
+                // LabeledContent("Application", value: "Hike")
                 
                 // 2. Advanced Labeled Content
+                CustomListRowView(rowLabel: "Application", rowIcon: "apps.iphone", rowContent: "Hike", rowTintColor: .blue)
                 
+                CustomListRowView(rowLabel: "Comatibility", rowIcon: "info.circle", rowContent: "iOS, iPadOS", rowTintColor: .red)
+                
+                CustomListRowView(rowLabel: "Technology", rowIcon: "swift", rowContent: "Swift", rowTintColor: .orange)
+                
+                CustomListRowView(rowLabel: "Version", rowIcon: "gear", rowContent: "1.0", rowTintColor: .purple)
+                
+                CustomListRowView(rowLabel: "Developer", rowIcon: "ellipsis.curlybraces", rowContent: "John Doe", rowTintColor: .mint)
+                
+                CustomListRowView(rowLabel: "Designer", rowIcon: "paintpalette", rowContent: "Robert Petras", rowTintColor: .pink)
+                
+                CustomListRowView(rowLabel: "Website", rowIcon: "globe", rowContent: "https://credo.academy", rowTintColor: .indigo)
                 
             } //: SECTION
 
         } //: LIST
-        
-        
     }
 }
 
