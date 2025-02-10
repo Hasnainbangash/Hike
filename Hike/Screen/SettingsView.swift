@@ -12,7 +12,16 @@ struct SettingsView: View {
         List {
             // MARK: - SECTION: HEADER
             
-            Text("Settings View")
+            HStack {
+                Image(systemName: "laurel.leading")
+                    .font(.system(size: 80, weight: .black))
+                
+                Text("Hike")
+                    .font(.system(size: 66, weight: .black))
+                
+                Image(systemName: "laurel.trailing")
+                    .font(.system(size: 80, weight: .black))
+            }
             
             // MARK: - SECTION: ICONS
             
