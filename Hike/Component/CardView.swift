@@ -93,7 +93,7 @@ struct CardView: View {
                         )
                         .shadow(color: .black.opacity(0.25), radius: 0.25, x: 1, y: 2)
                 }
-                
+                .buttonStyle(GradientButton())
             } //: VSTACK
         } //: Card
         .frame(width: 320, height: 570)
