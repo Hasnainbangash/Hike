@@ -16,19 +16,30 @@ struct CardView: View {
                 // MARK: - HEADER
                 
                 VStack(alignment: .leading) {
-                    Text("Hiking")
-                        .fontWeight(.black)
-                        .font(.system(size: 52))
-                        .foregroundStyle(
-                            LinearGradient(
-                                colors: [
-                                    .customGrayLight,
-                                    .customGrayMedium
-                                ],
-                                startPoint: .top,
-                                endPoint: .bottom
+                    HStack {
+                        Text("Hiking")
+                            .fontWeight(.black)
+                            .font(.system(size: 52))
+                            .foregroundStyle(
+                                LinearGradient(
+                                    colors: [
+                                        .customGrayLight,
+                                        .customGrayMedium
+                                    ],
+                                    startPoint: .top,
+                                    endPoint: .bottom
+                                )
                             )
-                        )
+                        
+                        Button {
+                            // ACTION: Show a Sheet
+                            print("The button was pressed.")
+                        } label: {
+                            Text("Button")
+                        }
+
+                        
+                    }
                     
                     Text("Fun and enjoyable outdoor activity for friends and families.")
                         .multilineTextAlignment(.leading)
@@ -36,6 +47,7 @@ struct CardView: View {
                         .foregroundColor(.customGrayMedium)
                     
                 } //: HEADER
+                .padding(.horizontal, 30)
                 
                 // MARK: - MAIN CONTENT
                 
@@ -59,6 +71,9 @@ struct CardView: View {
                 }
                 
                 // MARK: - FOOTER
+                
+                
+                
             } //: VSTACK
         } //: Card
         .frame(width: 320, height: 570)
