@@ -76,7 +76,10 @@ struct SettingsView: View {
                 }
                     .padding(.vertical, 8)
             ) {
-                Text("List Row")
+                // 1. Basic Labeled Content
+                LabeledContent("Application", value: "Hike")
+                
+                
             } //: SECTION
 
         } //: LIST
