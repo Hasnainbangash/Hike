@@ -11,6 +11,7 @@ struct MotionAnimationView: View {
     // MARK: - PROPERTIES
     
     @State private var randomCircle: Int = Int.random(in: 6...12)
+    @State private var isAnimating: Bool = false
     
     // MARK: - FUNCTIONS
     
@@ -25,6 +26,10 @@ struct MotionAnimationView: View {
     }
     
     // 3. RANDOM SCALE
+    func randomScale() -> CGFloat {
+        return CGFloat(Double.random(in: 0.1...2.0))
+    }
+    
     // 4. RANDOM SPEED
     // 5. RANDOM DELAY
     
@@ -39,6 +44,15 @@ struct MotionAnimationView: View {
                         x: randomCoordinate(),
                         y: randomCoordinate()
                     )
+                    .scaleEffect(isAnimating ? randomScale() : 1)
+                    .onAppear {
+                        withAnimation(
+                            .interpolatingSpring(stiffness: 0.25, damping: 0.25)
+                            .repeatForever()
+                        ) {
+                            isAnimating = true
+                        }
+                    }
             }
         } //: ZSTACK
         .frame(width: 256, height: 256)
