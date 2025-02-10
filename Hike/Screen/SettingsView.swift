@@ -26,6 +26,18 @@ struct SettingsView: View {
                 
                 Spacer()
             }
+            .foregroundStyle(
+                LinearGradient(
+                    colors: [
+                        .customGreenLight,
+                        .customGreenMedium,
+                        .customGreenDark
+                    ],
+                    startPoint: .top,
+                    endPoint: .bottom
+                )
+            )
+            .padding(.top, 8)
             
             // MARK: - SECTION: ICONS
             
