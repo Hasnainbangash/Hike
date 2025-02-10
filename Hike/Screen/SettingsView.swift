@@ -66,6 +66,19 @@ struct SettingsView: View {
             // MARK: - SECTION: ICONS
             
             // MARK: - SECTION: ABOUT
+            
+            Section(
+                header: Text("ABOUT THE APP"),
+                footer: HStack {
+                    Spacer()
+                    Text("Copyright © All right reserved.") // Option + G to genrate the copyright icon
+                    Spacer()
+                }
+                    .padding(.vertical, 8)
+            ) {
+                Text("List Row")
+            } //: SECTION
+
         } //: LIST
         
         
