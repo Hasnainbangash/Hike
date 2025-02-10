@@ -13,13 +13,13 @@ struct CustomBackgroundView: View {
             
             // MARK: - 3. DEPTH
             
-            Color("ColorGreenDark")
+            Color.customGreenDark
                 .cornerRadius(40)
                 .offset(y: 12) //Shift the color little bit down
             
             // MARK: - 2. LIGHT
             
-            Color("ColorGreenLight")
+            Color.customGreenLight
                 .cornerRadius(40)
                 .offset(y: 3)
                 .opacity(0.85)
@@ -28,8 +28,8 @@ struct CustomBackgroundView: View {
             
             LinearGradient(
                 colors: [
-                    Color("ColorGreenLight"),
-                    Color("ColorGreenMedium")
+                    Color.customGreenLight,
+                    Color.customGreenMedium
                 ],
                 startPoint: .top,
                 endPoint: .bottom
