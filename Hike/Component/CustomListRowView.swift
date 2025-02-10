@@ -18,7 +18,7 @@ struct CustomListRowView: View {
     var body: some View {
         LabeledContent {
             // Content
-            Text("Hike")
+            Text(rowContent)
                 .foregroundColor(.primary)
                 .fontWeight(.heavy)
         } label: {
@@ -27,13 +27,13 @@ struct CustomListRowView: View {
                 ZStack {
                     RoundedRectangle(cornerRadius: 8)
                         .frame(width: 30, height: 30)
-                        .foregroundColor(.blue)
-                    Image(systemName: "apps.iphone")
+                        .foregroundColor(rowTintColor)
+                    Image(systemName: rowIcon)
                         .foregroundColor(.white)
                         .fontWeight(.semibold)
                 }
                 
-                Text("Application")
+                Text(rowLabel)
             }
         }
     }
