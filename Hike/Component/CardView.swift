@@ -80,7 +80,7 @@ struct CardView: View {
                         )
                         .frame(width: 256, height: 256)
                     
-                    Image("image-1")
+                    Image("image-\(randomNumber)")
                         .resizable()
                         .scaledToFit()
                 }
@@ -90,6 +90,7 @@ struct CardView: View {
                 Button {
                     // ACTION: Generate a random number
                     print("The button was pressed.")
+                    randomImage()
                 } label: {
                     Text("Explore More")
                         .font(.title2)
