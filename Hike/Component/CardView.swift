@@ -91,7 +91,10 @@ struct CardView: View {
                                 endPoint: .bottom
                             )
                         )
+                        .shadow(color: .black.opacity(0.25), radius: 0.25, x: 1, y: 2)
                 }
+                .padding(.vertical)
+                .padding(.horizontal, 30)
                 .background(
                     LinearGradient(
                         colors: [
@@ -102,6 +105,7 @@ struct CardView: View {
                         endPoint: .bottom
                     )
                 )
+                .cornerRadius(40)
                 
             } //: VSTACK
         } //: Card
