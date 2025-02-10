@@ -18,8 +18,12 @@ struct SettingsView: View {
                 Image(systemName: "laurel.leading")
                     .font(.system(size: 80, weight: .black))
                 
-                Text("Hike")
-                    .font(.system(size: 66, weight: .black))
+                VStack(spacing: -10) {
+                    Text("Hike")
+                        .font(.system(size: 66, weight: .black))
+                    Text("Editors' Choice")
+                        .fontWeight(.medium)
+                }
                 
                 Image(systemName: "laurel.trailing")
                     .font(.system(size: 80, weight: .black))
