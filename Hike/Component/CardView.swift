@@ -8,6 +8,19 @@
 import SwiftUI
 
 struct CardView: View {
+    
+    // MARK: - PROPERTIES
+    
+    @State private var imageNumber: Int = 1
+    @State private var randomNumber: Int = 1
+    
+    // MARK: - FUNCTIONS
+    
+    func randomImage() {
+        randomNumber = Int.random(in: 1...5)
+        imageNumber = randomNumber
+    }
+    
     var body: some View {
         ZStack {
             CustomBackgroundView()
