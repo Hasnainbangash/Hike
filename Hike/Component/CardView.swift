@@ -17,13 +17,18 @@ struct CardView: View {
     // MARK: - FUNCTIONS
     
     func randomImage() {
-        
+        print("--- BUTTON WAS PRESSED ---")
+        print("Status: Old Image Number = \(imageNumber)")
         repeat {
             randomNumber = Int.random(in: 1...5)
+            print("Action: Random Number Generated = \(randomNumber)")
         } while imageNumber == randomNumber
         
         imageNumber = randomNumber
         
+        print("Result: New Image Number = \(imageNumber)")
+        print("--- THE END ---")
+        print("\n")
     }
     
     var body: some View {
