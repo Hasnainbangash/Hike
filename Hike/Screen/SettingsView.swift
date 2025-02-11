@@ -77,20 +77,22 @@ struct SettingsView: View {
             // MARK: - SECTION: ICONS
             
             Section(header: Text("Alternate Icons")) {
-                
-                ForEach(alternateAppIcons.indices, id: \.self) { item in
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        Button {
-                            print("Icon was pressed.")
-                        } label: {
-                            Image("\(alternateAppIcons[item])-Preview")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 80, height: 80)
-                                .cornerRadius(16)
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 12) {
+                        ForEach(alternateAppIcons.indices, id: \.self) { item in
+                            
+                            Button {
+                                print("Icon was pressed.")
+                            } label: {
+                                Image("\(alternateAppIcons[item])-Preview")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 80, height: 80)
+                                    .cornerRadius(16)
+                            }
+                            .buttonStyle(.borderless)
+                            
                         }
-                        .buttonStyle(.borderless)
-                        
                     }
                 } //: SCROLL VIEW
                 
@@ -132,7 +134,7 @@ struct SettingsView: View {
                 CustomListRowView(rowLabel: "Website", rowIcon: "globe", rowTintColor: .indigo, rowLinkLabel: "Credo Academy", rowLinkDestination: "https://credo.academy")
                 
             } //: SECTION
-
+            
         } //: LIST
     }
 }
