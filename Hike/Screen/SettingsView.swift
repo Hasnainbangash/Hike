@@ -91,16 +91,17 @@ struct SettingsView: View {
                                     .cornerRadius(16)
                             }
                             .buttonStyle(.borderless)
-                            
                         }
                     }
                 } //: SCROLL VIEW
+                .padding(.top, 12)
                 
                 Text("Choose your favourite app icon from the collection above.")
                     .frame(minWidth: 0, maxWidth: .infinity)
                     .multilineTextAlignment(.center)
                     .foregroundColor(.secondary)
                     .font(.footnote)
+                    .padding(.bottom, 12)
             } //: SECTION
             .listRowSeparator(.hidden)
             
