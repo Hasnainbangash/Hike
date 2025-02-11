@@ -77,6 +77,21 @@ struct SettingsView: View {
             // MARK: - SECTION: ICONS
             
             Section(header: Text("Alternate Icons")) {
+                
+                ScrollView(.horizontal, showsIndicators: false) {
+                    Button {
+                        print("Icon was pressed.")
+                    } label: {
+                        Image("AppIcon-MagnifyingGlass-Preview")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 80, height: 80)
+                            .cornerRadius(16)
+                    }
+                    .buttonStyle(.borderless)
+
+                } //: SCROLL VIEW
+                
                 Text("Choose your favourite app icon from the collection above.")
                     .frame(minWidth: 0, maxWidth: .infinity)
                     .multilineTextAlignment(.center)
