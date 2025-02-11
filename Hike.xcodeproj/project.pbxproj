@@ -391,6 +391,7 @@
 		D0E43BD72D59C96E00AFD5F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "AppIcon-MagnifyingGlass AppIcon-Map AppIcon-Mushroom AppIcon-Camera AppIcon-Backpack Appicon-Campfire";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
@@ -420,6 +421,7 @@
 		D0E43BD82D59C96E00AFD5F7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "AppIcon-MagnifyingGlass AppIcon-Map AppIcon-Mushroom AppIcon-Camera AppIcon-Backpack Appicon-Campfire";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
