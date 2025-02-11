@@ -8,6 +8,17 @@
 import SwiftUI
 
 struct SettingsView: View {
+    // MARK: - PROPERTIES
+    
+    private let alternateAppIcons: [String] = [
+        "AppIcon-MagnifyingGlass",
+        "AppIcon-Map",
+        "AppIcon-Musroom",
+        "AppIcon-Camera",
+        "AppIcon-Backback",
+        "AppIcon-Campfire"
+    ]
+    
     var body: some View {
         List {
             // MARK: - SECTION: HEADER
@@ -64,6 +75,15 @@ struct SettingsView: View {
             .listRowSeparator(.hidden)
             
             // MARK: - SECTION: ICONS
+            
+            Section(header: Text("Alternate Icons")) {
+                Text("Choose your favourite app icon from the collection above.")
+                    .frame(minWidth: 0, maxWidth: .infinity)
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(.secondary)
+                    .font(.footnote)
+            } //: SECTION
+            .listRowSeparator(.hidden)
             
             // MARK: - SECTION: ABOUT
             
