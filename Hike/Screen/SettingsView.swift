@@ -13,9 +13,9 @@ struct SettingsView: View {
     private let alternateAppIcons: [String] = [
         "AppIcon-MagnifyingGlass",
         "AppIcon-Map",
-        "AppIcon-Musroom",
+        "AppIcon-Mushroom",
         "AppIcon-Camera",
-        "AppIcon-Backback",
+        "AppIcon-Backpack",
         "AppIcon-Campfire"
     ]
     
@@ -78,18 +78,20 @@ struct SettingsView: View {
             
             Section(header: Text("Alternate Icons")) {
                 
-                ScrollView(.horizontal, showsIndicators: false) {
-                    Button {
-                        print("Icon was pressed.")
-                    } label: {
-                        Image("AppIcon-MagnifyingGlass-Preview")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 80, height: 80)
-                            .cornerRadius(16)
+                ForEach(alternateAppIcons.indices, id: \.self) { item in
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        Button {
+                            print("Icon was pressed.")
+                        } label: {
+                            Image("\(alternateAppIcons[item])-Preview")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 80, height: 80)
+                                .cornerRadius(16)
+                        }
+                        .buttonStyle(.borderless)
+                        
                     }
-                    .buttonStyle(.borderless)
-
                 } //: SCROLL VIEW
                 
                 Text("Choose your favourite app icon from the collection above.")
